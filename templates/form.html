@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+		<h1>passBYTE<i class="em em-closed_lock_with_key" aria-role="presentation" aria-label="CLOSED LOCK WITH KEY"></i></h1>
+		<h2>Random Password Generator</h2>
+		<link rel="stylesheet" href="{{ url_for('static' ,filename='styles/passBYTE.css') }}">
+	</head>
+
+	<body>
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<form class="form-horizontal" action={{ url_for('result') }}  method="post">
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="var_1">Length :</label>
+						<div class="col-xs-7">
+							<input type="number" class="form-control" name="var_1" placeholder="&nbsp;0&nbsp;">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="var_1">Keywords :</label>
+						<div class="col-xs-7">
+							<input type="string" class="form-control" name="var_2" placeholder="&nbsp;Enter Here&nbsp;">
+						</div>
+					</div>
+					<div class="form-group">
+            			<label class="control-label col-xs-3">Method :</label>
+            			<div class="col-xs-5">
+                			<select class="form-control" name="operation">
+                    			<option>Only Lower char</option>
+                    			<option>Lower + Upper char</option>
+                    			<option>Lower + upper + Special char</option>
+
+                			</select>
+            			</div>
+            		</div>
+					<div class="form-group">
+            			<div class="col-xs-offset-3 col-xs-9">
+                			<input type="submit" class="btn btn-success" value="Generate">
+            			</div>
+        			</div>
+        		</form>
+        	</div>
+        	<div class="col-md-4"></div></div>
+		</div>
+	</body>
+</html>

@@ -14,7 +14,7 @@ def welcome():
 def result():
     lower="abcdefghijklmnopqrstuvwxyz"
     upper="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-    digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !@#$%^&*()"
+    digits="0123456789 !@#$%^&*()"
     var_1 = request.form.get("var_1", type=int)
     var_2 = request.form.get("var_2", type=str)
     operation = request.form.get("operation")
@@ -28,7 +28,7 @@ def result():
             result +=  random.choice(upper)
     elif(operation == 'Lower + upper + Special char'):
         for i in range(var_1-len(var_2)):
-            result += random.choice(digits)
+            result += random.choice(digits) + random.choice(upper)
     else:
         result = 'INVALID CHOICE'
     entry = result

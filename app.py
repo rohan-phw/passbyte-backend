@@ -28,7 +28,7 @@ def result():
             result +=  random.choice(upper)
     elif(operation == 'Lower + upper + Special char'):
         for i in range(var_1-len(var_2)):
-            result += random.choice(digits) + random.choice(upper)
+            result += random.choice(digits) 
     else:
         result = 'INVALID CHOICE'
     entry = result
